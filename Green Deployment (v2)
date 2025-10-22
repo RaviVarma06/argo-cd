@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flm-v2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swiggy-v2
+  template:
+    metadata:
+      labels:
+        app: swiggy-v2
+    spec:
+      containers:
+        - name: cont-v2
+          image: shaikmustafa/mytetrisgame:v2
+          ports:
+            - containerPort: 3000
