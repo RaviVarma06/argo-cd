@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: swiggy-v1  # Change to swiggy-v2 to route to green deployment
+    app: swiggy-v2  # Change to swiggy-v2 to route to green deployment
   ports:
     - port: 3000
       targetPort: 3000
